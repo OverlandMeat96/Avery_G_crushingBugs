@@ -46,18 +46,10 @@
 	event.target.appendChild(document.querySelector(`#${currentPiece}`));
 }
 
-	// add some event handling for the nav navButtons
+	// Events
 	navButtons.forEach(button => button.addEventListener('click', changeImageSet));
-
-	// set up the drag event on our puzzle pieces
 	puzzlePiece.forEach(piece => piece.addEventListener('dragstart', dragStart));
-
-	// set up the dragover event for our drop Zones
 	dropZones.forEach(zone => zone.addEventListener('dragover', allowDrag));
-
 	dropZones.forEach(zone => zone.addEventListener('drop', allowDrop));
-
-	//call, apply and bind are different ways to invoke functions
-	//if you should know what call does -> research in on MDN
 	changeImageSet.call(navButtons[0])
 })();
